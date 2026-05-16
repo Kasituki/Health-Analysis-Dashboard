@@ -5,6 +5,7 @@ import {
   generateSuggestion,
   buildGeminiPrompt,
 } from "@/services/externalApis";
+import { DEMO_RESPONSES } from "@/services/demoData";
 import type { HealthAnalysisRequest, HealthAnalysisResponse } from "@/types";
 
 export async function POST(req: NextRequest) {
@@ -17,6 +18,18 @@ export async function POST(req: NextRequest) {
         { error: "userId は必須です" },
         { status: 400 }
       );
+    }
+
+    // ─── デモモード: Supabase・Gemini を呼ばず固定データを返す ───────────
+    if (process.env.NEXT_PUBLIC_DEMO_MODE === "true") {
+      const demoData = DEMO_RESPONSES[userId];
+      if (!demoData) {
+        return NextResponse.json(
+          { error: "デモデータが見つかりません" },
+          { status: 404 }
+        );
+      }
+      return NextResponse.json(demoData, { status: 200 });
     }
 
     // ─── DB からデータ取得（並列実行） ────────────────────────────────────
