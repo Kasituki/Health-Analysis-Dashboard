@@ -121,3 +121,9 @@ HealthChecker/
 | BMI | 18.5〜24.9 | 25〜29.9 | 30以上 |
 | 収縮期血圧 | 〜129 mmHg | 130〜139 mmHg | 140以上 mmHg |
 | HbA1c | 〜5.5% | 5.6〜6.4% | 6.5%以上 |
+## イメージ
+* ダッシュボード全体像のスクリーンショット
+<img width="1429" height="949" alt="image" src="https://github.com/Kasituki/Health-Analysis-Dashboard/docs/docs/dashboard.png" />
+
+* AI健康改善アドバイスのスクリーンショット
+<img width="1156" height="1285" alt="image" src="https://github.com/Kasituki/Health-Analysis-Dashboard/docs/docs/ai-advice.png" />
