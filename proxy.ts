@@ -11,6 +11,11 @@ import { NextRequest, NextResponse } from "next/server";
  * Vercelにデプロイする際は必ず両変数を設定してください。
  */
 export function proxy(req: NextRequest) {
+  // デモモード時は認証をスキップ
+  if (process.env.NEXT_PUBLIC_DEMO_MODE === "true") {
+    return NextResponse.next();
+  }
+
   const authUser = process.env.BASIC_AUTH_USER;
   const authPassword = process.env.BASIC_AUTH_PASSWORD;
 
