@@ -123,7 +123,7 @@ HealthChecker/
 | HbA1c | 〜5.5% | 5.6〜6.4% | 6.5%以上 |
 ## イメージ
 * ダッシュボード全体像のスクリーンショット
-<img width="1429" height="949" alt="image" src="https://github.com/Kasituki/Health-Analysis-Dashboard/docs/docs/dashboard.png" />
+<img width="1429" height="949" alt="image" src="docs/dashboard.png" />
 
 * AI健康改善アドバイスのスクリーンショット
-<img width="1156" height="1285" alt="image" src="https://github.com/Kasituki/Health-Analysis-Dashboard/docs/docs/ai-advice.png" />
+<img width="1156" height="1285" alt="image" src="docs/ai-advice.png" />
