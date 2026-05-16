@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
 
     // ─── デモモード: Supabase・Gemini を呼ばず固定データを返す ───────────
     if (process.env.NEXT_PUBLIC_DEMO_MODE === "true") {
+      console.log("[Demo] デモモード: Supabase・Gemini をスキップして固定データを返します");
       const demoData = DEMO_RESPONSES[userId];
       if (!demoData) {
         return NextResponse.json(
